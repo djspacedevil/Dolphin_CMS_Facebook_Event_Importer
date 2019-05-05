@@ -1,0 +1,76 @@
+2.1.7 to 2.2.0
+Overwrite all files.
+Changes in Facebook Graph
+Changes in eventID grabbing
+
+2.1.6 to 2.1.7
+Begintime and Endtime fix, when it is not set, default, begintime is endtime
+token request fix for facebook. Facebook change the request methode
+
+2.1.5 to 2.1.6
+Tokken Error from Facebook, a single replace in the tokken from & to ? help here.
+Overwrite GoesiFbImportALL.php
+Overwrite GoesiFbImport.php
+
+2.1.4 to 2.1.5
+overwrite the classes/GoesiFbImport.php and classes/GoesiFbImportALL.php with the new files.
+Overwrite the templates/base/admin.html
+Overwrite the language files with the new language files.
+Recompile the language in the Backend for the Module.
+Look at the bottom Import List in Admin Backend for the activation link.
+Facebook need now a token for every graph request. So we need to generate a token. Click on the "activate" link under the link list.
+You must only activate it 1 times. That the module can generate it on every check.
+
+2.1.3 to 2.1.4
+Little fix: Facebook change there Event links.
+Overwrite all files
+
+
+2.1.2 to 2.1.3
+Only replace the GoesiFbImport.php and GoesiFbImportALL.php
+
+Problem:
+The ' symbole break the SQL Satements. In english many people use it. but the ' is a break symbole in SQL.
+
+2.1.0 to 2.1.1:
+Overwrite GoesiFbImport.php and GoesiFbImportALL.php
+Copy GoesiFbCountry.php to the /classes/  folder.
+
+Why?:
+Add better Location lockup. Now the country will add correct. When the event brings no street, city, or zip, the 
+script will use the street, city and zip from the event-place.
+ReConfig the Event Discription. /r/n to <br>.
+
+
+2.0.0 to 2.1.1:
+
+Make a Backup of your list
+
+Overwrite all file with the new files.
+
+Open **/classes/GoesiFbCron.php --> Add your data for Cookie Catching , Site Admin, Pass, your Site URL. e.g. http://example.com  --> Save
+
+Recomplie the language
+
+
+1.0.0 to 2.1.1: 
+
+Make a backup of your list -->> *.txt
+
+Deinstall the module under Tools -> Module.
+
+Delete all module files and reupload the new files.
+
+Open **/classes/GoesiFbCron.php --> Add your data for Cookie Catching , Site Admin, Pass, your Site URL. e.g. http://example.com  --> Save
+
+And Reinstall it.
+
+
+Old Problem:
+
+
+Facebook have change links for the events, Now we check 5 link variants.
+
+add, Categorie and Tags in the Admin Area.
+
+2.0.0 CronJob will run, but images was not imported. The BxDolService::call needs a cookie from admin to work correct.
