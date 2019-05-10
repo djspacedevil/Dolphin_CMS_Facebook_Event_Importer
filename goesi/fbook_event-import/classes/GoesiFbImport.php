@@ -44,7 +44,7 @@ $getActive = $this-> oModule ->_oDb->getActive($imp_url);
  
 if ($getActive == 1) {
 
-// Zugriff auf Inhalte nur f�r Registierte Facebook User
+// Zugriff auf Inhalte nur für Registierte Facebook User
 $login_email = $this-> oModule ->_oDb->FacebookUser($user); // get user
 $login_pass  = $this-> oModule ->_oDb->FacebookPass($pass); // get pass
 $categorie = $this-> oModule ->_oDb->FacebookCategorie($cat); //get categorie
@@ -70,7 +70,7 @@ $ch = curl_init();
 
 	 $result = curl_exec($ch);
 	
-	//�ffne nun die Informations Seite
+	//Öffne nun die Informations Seite
 if ($login_email != '' && $login_pass != '' ) {
     		curl_setopt($ch, CURLOPT_POST, 0);
     		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -79,7 +79,7 @@ if ($login_email != '' && $login_pass != '' ) {
     		$result = curl_exec($ch);
 ////////////////////////////////////////////////
 // Token
-    		curl_setopt($ch, CURLOPT_URL, 'https://graph.facebook.com/oauth/access_token?client_id=499153490110455&client_secret=1f9ab3e14fab60039f8e37546a367926&grant_type=client_credentials');
+    		curl_setopt($ch, CURLOPT_URL, 'https://graph.facebook.com/oauth/access_token?client_id=*********&client_secret=******&grant_type=client_credentials');
     		curl_setopt($ch, CURLOPT_POST, 0);
     		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -130,7 +130,7 @@ echo" ";
 
 $contents = file_get_contents('https://graph.facebook.com/'.$single_event.$fb_token);
 $event = json_decode($contents,true);
-$sonderzeichen=array( "ö" => "oe", "ü" => "ue", "ß" => "ss","ä" => "ae", "Ä" => "Ae", "Ü" => "Ue", "Ö" => "Oe", "é" => "E", "€" => "Euro", "'" => "");
+$sonderzeichen=array( "Ã¶" => "oe", "Ã¼" => "ue", "ÃŸ" => "ss","Ã¤" => "ae", "Ã„" => "Ae", "Ãœ" => "Ue", "Ã–" => "Oe", "Ã©" => "E", "â‚¬" => "Euro", "'" => "");
 
 //Event-Daten abgreifen
 if ($event) {
@@ -351,7 +351,7 @@ $PicID = $subFrndArr[ 'ID' ];
 
 //Ende
 
-//Bild Datei l�schen 
+//Bild Datei löschen 
 	unlink($sPath);
 
 $i++;
